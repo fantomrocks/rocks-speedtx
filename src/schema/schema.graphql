@@ -1,0 +1,60 @@
+# Root schema definition
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+# Holds timestamp
+scalar Time
+
+# Holds amount of monetary value
+scalar Amount
+
+# Entry points for querying the API
+type Query {
+    "Get list of all Accounts supported by the API."
+    allAccounts: [Account!]!
+
+    "Get list of Accounts specified by their ID."
+    accounts(list:[ID!]):[Account!]!
+
+    "Get account pairs to be used together."
+    pairs: [AccountPair!]!
+    pair: AccountPair!
+}
+
+# data mutation entry points
+type Mutation {
+    "Transfer funds from one Account to another Account of the same Account Pair."
+    transfer(toTransfer: TransferInput!): Transaction
+}
+
+# Defines input type for Account to Account transfer inside an Account Pair
+input TransferInput {
+    fromAccountId: ID!
+    toAccountId: ID!
+    amount: Amount!
+}
+
+# Defines pairs of Accounts to be used together
+type AccountPair {
+    one: Account
+    two: Account
+}
+
+# Transaction inside the chain as a result of Transfer
+type Transaction {
+    id: ID!
+    from: Account!
+    to: Account!
+    amount: Amount!
+    timeStamp: Time!
+}
+
+# Fantom Account type specification
+type Account {
+    id: ID!
+    name: String!
+    address: String!
+    balance: Amount!
+}

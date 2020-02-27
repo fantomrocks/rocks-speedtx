@@ -1,0 +1,503 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Work Sans', 'Roboto', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.fr-app {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    background-color: #eeeeee;
+}
+
+.fr-app .fr-pane {
+    background-color: #1965e9;
+    color: white;
+    width: 100%;
+}
+
+.fr-app .fr-nav-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.fr-app .fr-nav-bar > * {
+    display: block;
+    align-items: stretch;
+    flex-grow: 0;
+}
+
+.fr-app .fr-nav-bar > .fr-title h2 {
+    font-size: 100%;
+    float: right;
+}
+
+.fr-app a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fr-app a:hover {
+    text-decoration: underline;
+}
+
+.fr-app .fr-container {
+    margin: 0;
+}
+
+/* ------------------------------------------------ */
+
+.fr-app header.fr-pane {
+    padding-bottom: 4rem;
+}
+
+.fr-app header a, .fr-app footer a {
+    color: white;
+    font-size: calc(10px + 1vmin);
+}
+
+.fr-app header h1, .fr-app header h2, .fr-app header h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.fr-app header h1 {
+    font-size: calc(16px + 4vmin);
+}
+
+.fr-app header h2 {
+    font-size: calc(16px + 2vmin);
+}
+
+.fr-app header h3 {
+    margin-top: 0.5rem;
+    color: #D1E0FB;
+}
+
+.fr-app header .fr-logo {
+    vertical-align: middle;
+    height: 5.5vmax;
+    margin-right: 1.2rem;
+}
+
+.fr-app header .fr-beta {
+    position: relative;
+    vertical-align: middle;
+    height: 1.5ex;
+    top: -0.5vh
+}
+
+.fr-app .fr-pane > .fr-container {
+    padding: 1.5rem 2rem;
+}
+
+.fr-app .fr-pane > .fr-container.fr-nav-bar {
+    padding-bottom: 0;
+}
+
+
+.fr-app .fr-pane > .fr-nav-bar .fr-nav {
+    margin-left: auto;
+}
+
+/* ------------------------------------------------ */
+
+.fr-footer {
+    padding: 0.5rem 1rem;
+    margin-top: auto;
+}
+
+.fr-app .fr-footer .fr-nav-bar {
+    flex-flow: row wrap;
+    margin: 0.5rem 0;
+}
+
+.fr-footer .fr-nav > * {
+    display: inline-block;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.1rem 1rem;
+}
+
+.fr-footer .fr-made-by .fr-in-love {
+    color: #EA3897;
+}
+
+.fr-footer .fr-external {
+    color: #cbdaf5;
+}
+
+/* ------------------------------------------------ */
+
+.fr-content {
+    flex-grow: 1;
+    display: block;
+    position: relative;
+    padding: 1vh 2vw;
+}
+
+.fr-accounts {
+    position: relative;
+    top: -3rem;
+    display: flex;
+    flex-flow: row;
+}
+
+.fr-accounts .fr-account {
+    flex-grow: 1;
+    min-width: 10vw;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin: 0;
+    padding: 1rem 2rem;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fr-accounts .fr-account:first-child {
+    margin-right: 10vw;
+}
+
+.fr-account > * {
+    margin: 0;
+    padding: 0;
+}
+
+.fr-account h4 {
+    color: #78909C;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    font-size: 200%;
+    line-height: 150%;
+}
+
+.fr-account .fr-amount {
+    font-size: calc(16px + 4vmin);
+    line-height: 130%;
+    text-align: right;
+}
+
+.fr-account .fr-amount > * {
+    display: inline-block;
+}
+
+.fr-account .fr-amount .fr-val {
+    font-weight: bold;
+}
+
+.fr-account .fr-amount .fr-unit {
+    font-size: 70%;
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
+.fr-account .fr-address {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: medium;
+    width: 100%;
+    color: #78909C;
+}
+
+/* ------------------------------------------------ */
+
+.fr-button-group {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.fr-button-group .fr-button {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    color: white;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s ease;
+}
+
+.fr-button-group .fr-button i {
+    margin: 0 0.5rem;
+}
+
+.fr-actions {
+    justify-content: center;
+    position: relative;
+    top: -1.5rem;
+    height: calc(45px + 1vmax);
+}
+
+.fr-actions .fr-button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 100%;
+    background-color: #24BEC1;
+}
+
+.fr-actions .fr-button:hover {
+    background-color: #22989b;
+}
+
+.fr-actions .fr-spinner {
+    height: 250px;
+}
+
+.fr-actions .fr-spinner-container {
+    display: none;
+    position: absolute;
+    top: -3vmin;
+}
+
+.fr-actions.fr-is-sending .fr-button {
+    display: none;
+}
+
+.fr-actions.fr-is-sending .fr-spinner-container {
+    display: block;
+}
+
+.fr-other {
+    justify-content: center;
+    margin: 1.7rem 0;
+}
+
+.fr-other .fr-button, .fr-other .fr-button:visited, .fr-other .fr-button:active {
+    color: white;
+    background-color: #6769DA;
+    border: 1px solid #6769DA;
+}
+
+.fr-button-group .fr-button:active {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.fr-button-group .fr-button:disabled {
+    border: 2px solid #24BEC1;
+    color: #9b9b9b;
+    background-color: transparent;
+}
+
+.fr-button-group .fr-button:disabled:hover {
+    border: 2px solid #22989b;
+}
+
+/* ------------------------------------------------ */
+
+.fr-transactions {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    border-radius: 1.5rem;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.fr-transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.fr-transactions table th, .fr-transactions table td {
+    padding: 0.3rem 0.1rem;
+}
+
+.fr-transactions thead th {
+    color: #78909C;
+    text-align: left;
+}
+
+.fr-transactions thead th:not(.fr-status) {
+    border-bottom: 1px solid #CFD8DC;
+}
+
+.fr-transactions tbody tr {
+    height: 1.2rem;
+}
+
+.fr-transactions .fr-status {
+    width: 3.5rem;
+}
+
+.fr-transactions .fr-time {
+    width: 10rem;
+}
+
+.fr-transactions .fr-amount {
+    text-align: right;
+    width: 7rem;
+}
+
+.fr-transactions .fr-account-name {
+    text-align: center;
+}
+
+.fr-transactions .fr-tx {
+    width: 35%;
+}
+
+.fr-transactions .fr-tx > * {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.fr-transactions .fr-badge, .fr-transactions .fr-badge > a {
+    text-align: center;
+    color: #24BEC1;
+}
+
+.fr-transactions .fr-no-tx {
+    color: #78909C;
+}
+
+.fr-transactions a, .fr-transactions a:visited, .fr-transactions a:active {
+    color: #1965e9;
+}
+
+/* ------------------------------------------------ */
+
+/* Smaller than mobile */
+@media (max-width: 480px) {
+    .fr-transactions .fr-from {
+        display: none;
+    }
+}
+
+/* Smaller than phablet */
+@media (max-width: 600px) {
+    .fr-transactions .fr-to {
+        display: none;
+    }
+}
+
+/* Smaller than tablet */
+@media (max-width: 670px) {
+    .fr-app header .fr-nav-bar > .fr-nav {
+        display: none;
+    }
+
+    .fr-content .fr-accounts {
+        flex-flow: column;
+    }
+
+    .fr-accounts .fr-account:first-child {
+        margin-right: 1vw;
+        margin-bottom: 2vh;
+    }
+}
+
+/* Smaller than tablet */
+@media (max-width: 1000px) {
+    .fr-transactions .fr-tx {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .fr-app header .fr-logo {
+        height: 8.5vmax;
+        margin-right: 0.6rem;
+    }
+}
+
+/* Spinner tuning */
+@media (min-width: 200px) {
+    .fr-actions .fr-spinner-container {
+        top: -2rem;
+    }
+
+    .fr-actions .fr-spinner {
+        height: 120px;
+    }
+}
+
+/* Spinner tuning */
+@media (min-width: 700px) {
+    .fr-actions .fr-spinner-container {
+        top: -2.5rem;
+    }
+
+    .fr-actions .fr-spinner {
+        height: 140px;
+    }
+}
+
+/* Spinner tuning */
+@media (min-width: 1000px) {
+    .fr-actions .fr-spinner {
+        height: 150px;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    .fr-accounts .fr-account {
+        padding: 2rem 2rem;
+    }
+
+    .fr-transactions .fr-tx {
+        max-width: 12vw;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1400px) {
+    .fr-app .fr-pane > *, .fr-app > .fr-content {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1920px) {
+    .fr-app .fr-pane > *, .fr-app > .fr-content {
+        width: 70vw;
+    }
+
+    .fr-actions.fr-is-working .fr-spinner {
+        top: -4rem;
+        width: 16rem;
+    }
+
+    .fr-actions .fr-spinner-container {
+        top: -3.2rem;
+    }
+
+    .fr-actions .fr-spinner {
+        height: 170px;
+    }
+
+    .fr-transactions .fr-tx {
+        max-width: 10vw;
+    }
+
+    .fr-app header .fr-logo {
+        height: 5vmax;
+        margin-right: 1rem;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 3000px) {
+    .fr-app .fr-pane > *, .fr-app > .fr-content {
+        width: 50vw;
+    }
+
+    .fr-actions .fr-spinner-container {
+        top: -3.5rem;
+    }
+
+    .fr-actions .fr-spinner {
+        height: 190px;
+    }
+
+    .fr-app header .fr-logo {
+        height: 4vmax;
+    }
+}
